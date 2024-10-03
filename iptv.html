@@ -15,12 +15,17 @@
             color: #ffffff;
         }
 
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Header Section */
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 30px;
             background-color: #1f1f1f;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             position: relative;
@@ -28,7 +33,7 @@
 
         .logo {
             color: #00d8ff;
-            font-size: 32px;
+            font-size: 24px;
             font-weight: bold;
         }
 
@@ -60,7 +65,7 @@
         /* Hamburger Menu Styles */
         .menu-icon {
             display: none;
-            font-size: 30px;
+            font-size: 28px;
             cursor: pointer;
             color: #00d8ff;
         }
@@ -73,7 +78,7 @@
             background-color: #1f1f1f;
             padding: 20px;
             position: absolute;
-            top: 70px;
+            top: 65px;
             right: 20px;
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -95,6 +100,9 @@
         @media (max-width: 768px) {
             .menu-icon {
                 display: block;
+                position: absolute;
+                right: 20px; /* Position it on the right */
+                top: 20px; /* Align vertically */
             }
 
             .nav-links {
@@ -110,21 +118,16 @@
             }
 
             .header-container {
-                justify-content: space-between; /* Adjust for alignment */
-                padding: 20px;
-                text-align: left;
+                justify-content: flex-start; /* Adjust to align logo on the left */
+                padding: 15px 20px;
             }
 
             .logo {
-                position: absolute;
-                left: 20px; /* Left alignment for logo */
-                top: 15px;
+                margin-right: auto;
             }
 
-            .menu-icon {
-                position: absolute;
-                right: 20px; /* Right alignment for menu */
-                top: 15px;
+            .logo {
+                font-size: 24px; /* Smaller size for logo */
             }
         }
 
