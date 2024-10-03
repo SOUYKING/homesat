@@ -1,0 +1,365 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.logo {
+    color: #00d8ff;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #00d8ff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Main Banner Section */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(135deg, #292929, #1a1a1a);
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    max-width: 50%;
+}
+
+.banner h2 {
+    font-size: 42px;
+    color: #00d8ff;
+}
+
+.banner p {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.banner-img {
+    max-width: 45%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00d8ff;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00b8e6;
+    transform: translateY(-3px);
+}
+
+/* Products Section */
+.products {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.products h1 {
+    font-size: 38px;
+    color: #00d8ff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #292929;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.product-item img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-item h2 {
+    font-size: 24px;
+    color: #00d8ff;
+    margin-bottom: 15px;
+}
+
+/* Icon Section */
+.icon-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #292929;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon-section h2 {
+    font-size: 38px;
+    color: #00d8ff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.icon-item {
+    width: 150px;
+    text-align: center;
+}
+
+.icon-item img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.icon-item h3 {
+    font-size: 18px;
+    color: #00d8ff;
+    margin: 10px 0 5px;
+}
+
+.icon-item p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Hover effect for icons */
+.icon-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    /* Header Adjustments */
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px; /* Smaller logo size */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px; /* Increased gap for better spacing */
+    }
+
+    /* Banner Adjustments */
+    .banner {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner-content {
+        max-width: 100%; /* Full width for content */
+    }
+
+    .banner-content h2 {
+        font-size: 28px;
+    }
+
+    .banner-content p {
+        font-size: 16px;
+    }
+
+    .banner-img {
+        max-width: 90%;
+        margin: 20px 0; /* Add spacing */
+    }
+
+    /* Button Adjustments */
+    .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    /* Products Section Adjustments */
+    .products {
+        padding: 30px 15px;
+    }
+
+    .products h1 {
+        font-size: 30px;
+    }
+
+    .product-list {
+        flex-direction: column; /* Stack products vertically */
+    }
+
+    .product-item {
+        width: 90%; /* Use full width with padding */
+        margin-bottom: 20px;
+    }
+
+    /* Icon Section Adjustments */
+    .icon-section {
+        padding: 30px 15px;
+    }
+
+    .icon-section h2 {
+        font-size: 30px;
+    }
+
+    .icon-container {
+        gap: 30px; /* Reduced gap for mobile */
+    }
+
+    .icon-item {
+        width: 120px; /* Adjusted size for icons */
+    }
+
+    .icon-item img {
+        width: 60px;
+    }
+}
+
+/* Styles for Larger Screens (Desktop) */
+@media (min-width: 1024px) {
+    /* Header Adjustments */
+    .header-container {
+        justify-content: space-between;
+        padding: 30px 60px;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    /* Banner Adjustments */
+    .banner {
+        padding: 60px;
+    }
+
+    .banner-content h2 {
+        font-size: 48px;
+    }
+
+    .banner-content p {
+        font-size: 24px;
+    }
+
+    .banner-img {
+        max-width: 50%;
+    }
+
+    .btn {
+        font-size: 20px;
+        padding: 15px 40px;
+    }
+
+    /* Products Section Adjustments */
+    .products {
+        padding: 70px 30px;
+    }
+
+    .products h1 {
+        font-size: 40px;
+    }
+
+    .product-list {
+        flex-direction: row; /* Align items horizontally */
+    }
+
+    .product-item {
+        width: 300px; /* Increase width for desktop view */
+        margin: 20px;
+    }
+
+    /* Icon Section Adjustments */
+    .icon-section {
+        padding: 70px 30px;
+    }
+
+    .icon-section h2 {
+        font-size: 40px;
+    }
+
+    .icon-item {
+        width: 150px;
+    }
+
+    .icon-item img {
+        width: 80px;
+    }
+}

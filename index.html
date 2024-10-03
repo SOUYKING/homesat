@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV & TV Boxes For Sale</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Hamburger Menu Styles */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #00d8ff;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            position: absolute;
+            top: 70px;
+            right: 20px; /* Align to the right */
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #00d8ff;
+        }
+
+        /* Show Hamburger Menu on Mobile */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                display: none; /* Hide default navigation links */
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .header-container {
+                position: relative;
+                justify-content: space-between; /* Adjust for alignment */
+                padding: 20px;
+                text-align: left;
+            }
+
+            .logo {
+                position: absolute;
+                left: 20px; /* Left alignment for logo */
+                top: 15px;
+            }
+
+            .menu-icon {
+                position: absolute;
+                right: 20px; /* Right alignment for menu */
+                top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: #00d8ff;">HOME SAT</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#products" class="products-link">Produits</a></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <!-- Mobile Navigation Menu -->
+                <div class="mobile-menu">
+                    <a href="index.html">Accueil</a>
+                    <a href="#products" class="products-link">Produits</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-content">
+            <h2>HOME-SAT, votre expert en électronique et services TV</h2>
+            <p>Découvrez une large gamme de produits high-tech sélectionnés pour vous : des téléviseurs dernier cri, box TV Android, démodulateurs, et services IPTV, Netflix, Prime Vidéo, Disney et Shahid. Nous proposons des appareils à la pointe de la technologie pour améliorer votre expérience audiovisuelle à la maison.</p>
+            <p>En plus de notre sélection de produits, nous offrons des services d'installation professionnelle, y compris la pose de paraboles pour une réception parfaite. Avec HOME-SAT, vous bénéficiez de conseils d'experts et de solutions personnalisées pour répondre à tous vos besoins en électronique et en divertissement.</p>
+            <p>Passez nous voir en magasin ou contactez-nous pour découvrir comment nous pouvons transformer votre espace de vie avec les dernières technologies.</p>
+            <!-- Updated button link to navigate to products section -->
+            <a href="#products" class="btn products-link">Acheter Maintenant</a>
+        </div>
+        <img src="banner.webp" alt="IPTV and TV" class="banner-img">
+    </section>
+
+<!-- Icon Section -->
+<section class="icon-section">
+    <h2>Vivre une nouvelle expérience !</h2>
+    <div class="icon-container">
+        <div class="icon-item">
+            <img src="tv.webp" alt="TV Icon">
+            <h3>TV</h3>
+            <p>Compatible avec les Smart TV</p>
+        </div>
+        <div class="icon-item">
+            <img src="pc.webp" alt="PC/Mac Icon">
+            <h3>PC / MAC</h3>
+            <p>Disponible également sur votre ordinateur</p>
+        </div>
+        <div class="icon-item">
+            <img src="phone.webp" alt="Smartphone Icon">
+            <h3>Smartphone</h3>
+            <p>Android & iOS</p>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section with ID for navigation -->
+<section id="products" class="products">
+    <h1>Nos Services</h1>
+    <div class="product-list">
+        <div class="product-item">
+            <img src="iptv.webp" alt="IPTV">
+            <h2>IPTV</h2>
+            <a href="iptv.html" class="btn">Voir Détails</a>
+        </div>
+
+        <div class="product-item">
+            <img src="boxtv.webp" alt="Box TV">
+            <h2>Box TV</h2>
+            <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+        </div>
+
+        <div class="product-item">
+            <img src="tele.webp" alt="Téléviseur">
+            <h2>Téléviseur</h2>
+            <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript Code for Smooth Scrolling and Hamburger Menu -->
+<script>
+    // Smooth scrolling for "Produits" link in the header and "Acheter Maintenant" button in the banner
+    document.querySelectorAll('.products-link').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.querySelector('#products').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    });
+
+    // Function to toggle mobile menu visibility
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

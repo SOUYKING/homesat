@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services IPTV</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Header Section */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .logo {
+            color: #00d8ff;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #00d8ff;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu Styles */
+        .menu-icon {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #00d8ff;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #00d8ff;
+        }
+
+        /* Show Hamburger Menu on Mobile */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-links {
+                display: none; /* Hide default navigation links */
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .header-container {
+                justify-content: space-between; /* Adjust for alignment */
+                padding: 20px;
+                text-align: left;
+            }
+
+            .logo {
+                position: absolute;
+                left: 20px; /* Left alignment for logo */
+                top: 15px;
+            }
+
+            .menu-icon {
+                position: absolute;
+                right: 20px; /* Right alignment for menu */
+                top: 15px;
+            }
+        }
+
+        /* Products Section */
+        .products {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #1f1f1f;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .products h1 {
+            font-size: 38px;
+            color: #00d8ff;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .product-item {
+            background-color: #292929;
+            padding: 30px 20px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .product-item img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .product-item h2 {
+            font-size: 24px;
+            color: #00d8ff;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00d8ff;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b8e6;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: #00d8ff;">HOME SAT</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="iptv.html">Plans IPTV</a></li>
+                </ul>
+                <!-- Hamburger Menu Icon -->
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <!-- Mobile Navigation Menu -->
+                <div class="mobile-menu">
+                    <a href="index.html">Accueil</a>
+                    <a href="iptv.html">Plans IPTV</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- IPTV Services Section -->
+    <section id="services" class="products">
+        <h1>Nos Services</h1>
+        <div class="product-list">
+            <!-- King 365 Product -->
+            <div class="product-item">
+                <img src="king365.webp" alt="King 365">
+                <h2>King 365</h2>
+                <a href="king365.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- King 4K Product -->
+            <div class="product-item">
+                <img src="king4k.webp" alt="King 4K">
+                <h2>King 4K</h2>
+                <a href="king4k.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Pro Sat Product -->
+            <div class="product-item">
+                <img src="prosat.webp" alt="Pro Sat">
+                <h2>Pro Sat</h2>
+                <a href="prosat.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Iron Pro Product -->
+            <div class="product-item">
+                <img src="ironpro.webp" alt="Iron Pro">
+                <h2>Iron Pro</h2>
+                <a href="ironpro.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Atlas Pro Product -->
+            <div class="product-item">
+                <img src="atlaspro.webp" alt="Atlas Pro">
+                <h2>Atlas Pro</h2>
+                <a href="atlaspro.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- GOGO V23 Product -->
+            <div class="product-item">
+                <img src="gogov23.webp" alt="GOGO V23">
+                <h2>GOGO V23</h2>
+                <a href="gogov23.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Shooters Product -->
+            <div class="product-item">
+                <img src="shooters.webp" alt="Shooters">
+                <h2>Shooters</h2>
+                <a href="shooters.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- KDMax Product -->
+            <div class="product-item">
+                <img src="kdmax.webp" alt="KDMax">
+                <h2>KDMax</h2>
+                <a href="kdmax.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Lynx Product -->
+            <div class="product-item">
+                <img src="lynx.webp" alt="Lynx">
+                <h2>Lynx</h2>
+                <a href="lynx.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Appolo Product -->
+            <div class="product-item">
+                <img src="appolo.webp" alt="Appolo">
+                <h2>Appolo</h2>
+                <a href="appolo.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- My HD Product -->
+            <div class="product-item">
+                <img src="myhd.webp" alt="My HD">
+                <h2>My HD</h2>
+                <a href="myhd.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- MegaStar Product -->
+            <div class="product-item">
+                <img src="megastar.webp" alt="MegaStar">
+                <h2>MegaStar</h2>
+                <a href="megastar.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Orca Product -->
+            <div class="product-item">
+                <img src="orca.webp" alt="Orca">
+                <h2>Orca</h2>
+                <a href="orca.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- SUP TV Product -->
+            <div class="product-item">
+                <img src="suptv.webp" alt="SUP TV">
+                <h2>SUP TV</h2>
+                <a href="suptv.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- Family 4K Product -->
+            <div class="product-item">
+                <img src="family4k.webp" alt="Family 4K">
+                <h2>Family 4K</h2>
+                <a href="family4k.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- IBO Player Product -->
+            <div class="product-item">
+                <img src="ibo.webp" alt="IBO Player (pour TV LG/Samsung)">
+                <h2>IBO Player (pour TV LG/Samsung)</h2>
+                <a href="ibo-player.html" class="btn">Voir Détails</a>
+            </div>
+
+            <!-- BOB Player Product -->
+            <div class="product-item">
+                <img src="bob.webp" alt="BOB Player (pour TV LG/Samsung)">
+                <h2>BOB Player (pour TV LG/Samsung)</h2>
+                <a href="bob-player.html" class="btn">Voir Détails</a>
+            </div>
+
+        </div>
+    </section>
+</body>
+<script>
+    // Function to toggle mobile menu visibility
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('active');
+    }
+</script>
+</html>
