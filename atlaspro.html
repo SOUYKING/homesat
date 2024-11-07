@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atlas pro - Tarification</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Deep black background */
+    color: #ffffff; /* White text for contrast */
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px; /* Adjusted padding */
+    background: linear-gradient(135deg, #1f1f1f, #04608e); /* Blue gradient */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.logo a {
+    font-size: 28px; /* Slightly smaller font for mobile */
+    font-weight: bold;
+    color: #ffffff; /* White logo text */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Reduced spacing */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+    font-size: 16px; /* Smaller font size */
+    padding: 6px 10px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ffffff; /* White hover effect */
+    color: #00b8e6; /* Blue text on hover */
+}
+
+/* Service Section */
+.service-content {
+    padding: 30px 10px; /* Reduced padding for mobile */
+    text-align: center;
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 15px;
+    margin: 10px 20px; /* Reduced spacing */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+.service-content img {
+    max-width: 200px; /* Smaller images for mobile */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-content h2 {
+    color: #00b8e6; /* Light blue for the section title */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+/* Pricing Section */
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Reduced gap */
+    margin-top: 20px;
+}
+
+/* Pricing Box */
+.pricing-box {
+    background: linear-gradient(135deg, #1f1f1f, #292929); /* Gradient for cards */
+    color: #ffffff;
+    padding: 30px 20px; /* Reduced padding for smaller size */
+    border-radius: 15px; /* Smooth rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border-top: 4px solid #00b8e6; /* Thinner border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 100%; /* Full width for better alignment */
+    max-width: 300px; /* Set a maximum width */
+    text-align: left;
+}
+
+.pricing-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Badge (Popular or Premium Label) */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4f4f; /* Red badge color */
+    color: white;
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 5px;
+    font-size: 12px; /* Smaller font */
+    font-weight: bold;
+}
+
+.popular {
+    background-color: #00d8ff; /* Light blue for popular */
+}
+
+.premium {
+    background-color: #d32f2f; /* Dark red for premium */
+}
+
+/* Price Box Details */
+.pricing-box h3 {
+    font-size: 22px; /* Smaller font size */
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600; /* Slightly bolder text */
+}
+
+.icon-container {
+    text-align: center;
+    font-size: 35px; /* Smaller icons */
+    margin-bottom: 15px;
+    color: #00d8ff;
+}
+
+.price {
+    font-size: 36px; /* Smaller font size */
+    color: #00b8e6;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 700; /* Bolder weight */
+}
+
+.pricing-box ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.pricing-box ul li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #dddddd;
+}
+
+.pricing-box ul li::before {
+    content: '✔';
+    margin-right: 8px; /* Reduced margin */
+    color: #00d8ff;
+}
+
+/* Button */
+.btn {
+    background-color: #00b8e6; /* Blue button */
+    color: #000;
+    padding: 12px 20px; /* Reduced padding */
+    text-decoration: none;
+    border-radius: 6px; /* More rounded */
+    display: inline-block;
+    text-align: center;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0088cc; /* Darker blue on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-box {
+        padding: 20px 15px; /* Further reduce padding for very small screens */
+    }
+
+    .badge {
+        font-size: 10px; /* Smaller badge font */
+        padding: 5px 10px;
+    }
+
+    .price {
+        font-size: 30px; /* Further reduce price font size */
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: #ffffff;">atlas pro</a></h1>
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="iptv.html">Plans IPTV</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Section -->
+    <section class="service-content">
+        <img src="atlaspro.webp" alt="Logo">
+        <h2>Choisissez la durée d'abonnement</h2>
+
+        <div class="pricing-container">
+            <!-- Test 24h Plan -->
+            <div class="pricing-box">
+                <div class="icon-container">💻</div>
+                <h3>Test 24h</h3>
+                <div class="price">Gratuit</div>
+                <ul>
+                    <li>Qualité Full HD, et 4K</li>
+                    <li>Films et Séries</li>
+                    <li>Replay</li>
+                    <li>Mise à jour Gratuite</li>
+                    <li>Compatible Avec Tous Les Appareils!</li>
+                    <li>EPS Actualisé</li>
+                    <li>Service Après Vente</li>
+                </ul>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+
+            <!-- 3 Months Plan -->
+            <div class="pricing-box">
+                <div class="icon-container">💻</div>
+                <h3>3 Mois</h3>
+                <div class="price">€15</div>
+                <ul>
+                    <li>Qualité Full HD, et 4K</li>
+                    <li>Films et Séries</li>
+                    <li>Replay</li>
+                    <li>Mise à jour Gratuite</li>
+                    <li>Compatible Avec Tous Les Appareils!</li>
+                    <li>EPS Actualisé</li>
+                    <li>Service Après Vente</li>
+                </ul>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+
+            <!-- 6 Months Plan -->
+            <div class="pricing-box">
+                <div class="badge popular">POPULAIRE</div>
+                <div class="icon-container">💻</div>
+                <h3>6 Mois</h3>
+                <div class="price">€25</div>
+                <ul>
+                    <li>Qualité Full HD, et 4K</li>
+                    <li>Films et Séries</li>
+                    <li>Replay</li>
+                    <li>Mise à jour Gratuite</li>
+                    <li>Compatible Avec Tous Les Appareils!</li>
+                    <li>EPS Actualisé</li>
+                    <li>Service Après Vente</li>
+                </ul>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+
+            <!-- 12 Months Plan -->
+            <div class="pricing-box">
+                <div class="badge premium">PREMIUM +</div>
+                <div class="icon-container">💻</div>
+                <h3>12 Mois</h3>
+                <div class="price">€40</div>
+                <ul>
+                    <li>Qualité Full HD, et 4K</li>
+                    <li>Films et Séries</li>
+                    <li>Replay</li>
+                    <li>Mise à jour Gratuite</li>
+                    <li>Compatible Avec Tous Les Appareils!</li>
+                    <li>EPS Actualisé</li>
+                    <li>Service Après Vente</li>
+                </ul>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

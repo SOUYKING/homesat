@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos TV Boxes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Section */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #1f1f1f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .logo {
+            color: #00d8ff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links li {
+            display: inline-block;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #00d8ff;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Hamburger Menu Styles */
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #00d8ff;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            position: absolute;
+            top: 65px;
+            right: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .mobile-menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            color: #00d8ff;
+        }
+
+        /* Show Hamburger Menu on Mobile */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .header-container {
+                justify-content: flex-start;
+                padding: 15px 20px;
+            }
+
+            .logo {
+                margin-right: auto;
+                font-size: 24px;
+            }
+        }
+
+        /* Products Section */
+        .products {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #1f1f1f;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .products h1 {
+            font-size: 38px;
+            color: #00d8ff;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .product-item {
+            background-color: #292929;
+            padding: 30px 20px;
+            border-radius: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-item:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .product-item img {
+            width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        .product-item h2 {
+            font-size: 24px;
+            color: #00d8ff;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00d8ff;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b8e6;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo"><a href="index.html" style="text-decoration: none; color: #00d8ff;">HOME SAT</a></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="tvbox.html">TV Boxes</a></li>
+                </ul>
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+                <div class="mobile-menu">
+                    <a href="index.html">Accueil</a>
+                    <a href="tvbox.html">TV Boxes</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- TV Boxes Section -->
+    <section id="tvboxes" class="products">
+        <h1>Nos TV Boxes</h1>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="mi_box_s_2nd_gen.jpg" alt="Mi Box S 2nd Gen">
+                <h2>Mi Box S 2nd Gen</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="xiaomi_stick_4k.jpg" alt="Xiaomi Stick 4K">
+                <h2>Xiaomi Stick 4K</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="xiaomi_stick_full_hd.jpg" alt="Xiaomi Stick Full HD">
+                <h2>Xiaomi Stick Full HD</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="chromecast_hd.jpg" alt="Chromecast HD">
+                <h2>Chromecast HD</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="chromecast_4k.jpg" alt="Chromecast 4K">
+                <h2>Chromecast 4K</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="watch_onn_full_hd.jpg" alt="Watch Onn Full HD">
+                <h2>Watch Onn Full HD</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="watch_onn_4k.jpg" alt="Watch Onn 4K">
+                <h2>Watch Onn 4K</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="icone_g7_plus.jpg" alt="Icone G7 Plus">
+                <h2>Icone G7 Plus</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="Icone KD3.jpg" alt="Icone KD3">
+                <h2>Icone KD3</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="icone_g_one.jpg" alt="Icone G-One">
+                <h2>Icone G-One</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="fire_stick_4k_max.jpg" alt="Fire Stick 4K Max WiFi 6">
+                <h2>Fire Stick 4K Max WiFi 6</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="strong_leap_s3_plus.jpg" alt="Strong Leap-S3 Plus">
+                <h2>Strong Leap-S3 Plus</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+            <div class="product-item">
+                <img src="strong_leap_s1.jpg" alt="Strong Leap S1">
+                <h2>Strong Leap S1</h2>
+                <a href="https://wa.me/+213560599031" class="btn">Commander via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+<script>
+    function toggleMenu() {
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenu.classList.toggle('active');
+    }
+</script>
+</html>
